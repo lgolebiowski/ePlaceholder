@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<link rel="shortcut icon" type="image/png" href="img/logo-enjoy.svg">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+<title>#ENJOY</title>
+<style>
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+html {
+	font-size: 62.5% !important; }
+	
+body {
+  font-family: 'Montserrat' !important;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+	box-sizing: border-box; 
+	overflow-x:hidden;
+	overflow-y:hidden;}
+
+  .container {
+    max-width: 100%;
+    height: 100vh;
+    background-color: #1f1f1f;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin: 0 auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    backface-visibility: hidden;
+  } 
+  .right-column-top {
+    background-color: #EAB4C6;
+    text-transform: uppercase;
+    animation-name: leftSlideIn;
+    animation-duration: 4s;
+    /* height: 320px; */
+    /* overflow:hidden; */
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .right-column-bottom {
+    background-color: #EAB4C6;
+    text-transform: uppercase;
+    animation-name: leftSlideIn;
+    animation-duration: 4s;
+    /* height: 320px; */
+    /* overflow:hidden; */
+    padding-right: 0px;
+    padding-left: 0px;
+	}
+	.left-column-bottom {
+		text-transform: none;
+	}
+  .col-md-6, .col-sm-6, .col-xs-12 {
+    padding: 0px !important;
+  }
+  .header__logo-box {
+    margin-top: 5rem;
+    margin-left: 5rem; }
+  
+  .header__logo {
+    height: 4rem; 
+    }  
+  .header__text-box {
+    float: bottom;
+    /* margin-top: 8.5rem; */
+    text-align: right; 
+    position: absolute;
+    bottom: -4.2rem;
+    right: 2.5rem }
+
+    .heading-primary {
+      color: #EAB4C6;
+      text-transform: uppercase;
+      margin-right: 5rem; }
+    
+    .heading-primary--first {
+      display: block;
+      font-size: 3.2rem;
+      letter-spacing: 0.2rem; 
+      animation-name: moveInLeft;
+      animation-duration: 8s;}
+    
+    .heading-primary--second {
+      display: block;
+      font-size: 3.2rem;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+      animation-name: moveInLeft;
+      animation-duration: 12s;} 
+  
+      @keyframes moveInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(0); }
+        100% {
+          opacity: 1;
+          transform: translate(0); } }
+
+      @keyframes leftSlideIn {
+        0% {  
+          opacity: 0;
+          transform: translateX(100rem); }
+        100% {
+          opacity: 1;
+          transform: translate(0); } }
+
+      @keyframes FadeIn {
+        0% {  
+          opacity: 0;
+             }
+        50% {
+          opacity: 0
+        }  
+        75% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+           }
+        }
+
+.contact-header {
+  color: #fff;
+  font-size: 1.5rem
+}
+#contact-box { 
+  padding-top: 13rem;
+  margin-left: 5rem;
+  color: #fff;
+  text-transform: none;
+  animation-name: fadeIn;
+  animation-duration: 8s;
+  animation-delay: 4s;
+  }
+.contact-logo-1 {
+	padding-right: 1.2rem;
+	padding-bottom: 0.3rem;
+}  
+.contact-logo-2 {
+	padding-right: 1rem;
+	padding-bottom: 0.3rem;
+}  
+.contact-logo-3 {
+	padding-right: 1.3rem;
+	padding-bottom: 0.3rem;
+}  
+.contact-side {
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+.contact-side__item {
+	padding-bottom: 8px;
+}
+.contact-side__item img {
+  height: 1.5rem;
+  padding-bottom: 0.3rem;
+}
+.contact-address {
+  margin-top: 8px;
+  font-size: 1.0rem;
+}
+.contact-address--first {
+  display: block; }
+.contact-address--second {
+  display: block; }
+
+.product {
+  height: 50vh;
+  position: relative;
+  animation-name: moveInLeft;
+  /* opacity: 0; */
+  transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -webkit-transition: opacity 2s ease-in-out;
+}
+.slide1,.slide2,.slide3,.slide4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide1 {
+  background: url(img/layout_2.png)no-repeat center;
+  background-size: cover;
+  animation:fade 8s infinite;
+  -webkit-animation:fade 8s infinite;
+  /* animation-delay: 2s; */
+} 
+.slide2 {
+  background: url(img/layout_3.png)no-repeat center;
+  background-size: cover;
+  animation:fade2 8s infinite;
+  -webkit-animation:fade2 8s infinite;
+  /* animation-delay: 2s; */
+}
+.slide3 {
+  background: url(img/layout_4.png)no-repeat center;
+  background-size: cover;
+  animation:fade3 8s infinite;
+  -webkit-animation:fade3 8s infinite;
+  /* animation-delay: 2s; */
+}
+.slide4 {
+  background: url(img/layout_1.png)no-repeat center;
+  background-size: cover;
+  animation:fade4 8s infinite;
+  -webkit-animation:fade4 8s infinite;
+  /* animation-delay: 2s; */
+}
+@keyframes fade
+{
+  0%  { opacity: 1}
+  25% { opacity: 0}
+  50% { opacity: 0}
+  75% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%  { opacity: 0}
+  25% { opacity: 1}
+  50% { opacity: 0}
+  75% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%  { opacity: 0}
+  25% { opacity: 0}
+  50% { opacity: 1}
+  75% { opacity: 0}
+  100% { opacity: 0}
+}
+@keyframes fade4
+{
+  0%  { opacity: 0}
+  25% { opacity: 0}
+  50% { opacity: 0}
+  75% { opacity: 1}
+  100% { opacity: 0}
+}
+@keyframes fade5
+{
+  0%   {opacity: 0}
+  25% { opacity: 0}
+  50% { opacity: 0}
+  75% { opacity: 0}
+  100% { opacity: 1}
+}
+.back-slide1,.back-slide2,.back-slide3,.back-slide4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.back-slide1 {
+  background: url(img/background_full_2.png)no-repeat center;
+  background-size: cover;
+  animation:fade 8s infinite;
+  -webkit-animation:fade 8s infinite;
+} 
+.back-slide2 {
+  background: url(img/background_full_3.png)no-repeat center;
+  background-size: cover;
+  animation:fade2 8s infinite;
+  -webkit-animation:fade2 8s infinite;
+}
+.back-slide3 {
+  background: url(img/background_full_4.png)no-repeat center;
+  background-size: cover;
+  animation:fade3 8s infinite;
+  -webkit-animation:fade3 8s infinite;
+}
+.back-slide4 {
+  background: url(img/background_full_1.png)no-repeat center;
+  background-size: cover;
+  animation:fade4 8s infinite;
+  -webkit-animation:fade4 8s infinite;
+}
+
+@media (min-width: 1200px) {
+.container {
+    max-width: 100% !important;}
+}
+@media (min-width: 960px) {
+.container {
+    max-width: 100%;}
+}
+@media (max-width: 400px) {
+  .container {
+      max-width: 100% !important;}
+  .row {
+      /* height: 100vh; */
+  }
+  .product {
+      height: 50vh;
+    }
+  }
+  @media (max-width: 420px) {
+    .header__logo-box {
+      margin-top: 3rem;
+      margin-left: 3rem; }
+    .header__text-box {
+      bottom: 3rem;
+      right: 5rem;
+      margin-top: 8.5rem;
+      margin-left: 3rem;
+      margin-right: 2rem;
+      text-align: left; }
+    .heading-primary--first {
+      font-size: 2.4rem;
+    }
+    .heading-primary--second {
+      font-size: 2.4rem;
+    }
+    .bottomsection{
+      flex-direction: column-reverse;
+    }
+    .column-left-top {
+      height: 50vh;
+    }
+    .column-left-bottom {
+      background-color: #1f1f1f;
+      height: 50vh;
+    }
+    .column-right-top {
+      
+    }
+    .column-right-bottom {
+      
+    }
+    #contact-box {
+      padding-top: 5.2rem;
+      margin-top: 0rem;
+      margin-left: 3rem;
+    }  
+    /* .contact-logo {
+      padding-right: 1.2rem;
+		}  
+		.contact-logo-2 {
+      padding-right: 1.4rem;
+		}  
+		.contact-logo-3 {
+      padding-right: 1.4rem;
+		}   */
+    .contact-side {
+      margin-top: 2.5rem;
+      font-size: 1.6rem;
+      list-style-type: none;
+    }
+    .contact-address {
+      margin-top: 8px;
+      font-size: 1.2rem;
+		}
+		.contact-numbers a {
+      color: #fff;
+    }
+    .contact-address--second a {
+      color: #fff;
+		}
+	}
+	@media only screen and (max-width: 820px) and (min-width: 421px) {
+		.column-left-top {
+      height: 50vh;
+		}
+		.header__logo-box {
+			margin-top: 3rem;
+			margin-left: 3rem;
+		}
+		.header__text-box {
+      bottom: 0.5rem;
+      right: 5rem;
+      margin-left: 3rem;
+      margin-right: 0px;
+      text-align: left; }
+		#contact-box {
+      padding-top: 2rem;
+      margin-top: 0rem;
+      margin-left: 3rem;
+		}  
+		.product {
+      height: 50vh;
+		}
+		.bottomsection{
+      flex-direction: column-reverse;
+		}
+		.column-left-top {
+      background-color: #1f1f1f;
+      height: 50vh;
+    }
+		.column-left-bottom {
+      background-color: #1f1f1f;
+      height: 50vh;
+		}
+		.contact-numbers a {
+      color: #fff;
+    }
+    .contact-address--second a {
+      color: #fff;
+		}
+  }
+  
+  @media (min-width: 1200px) and (orientation: landscape) {
+    #contact-box { 
+    	position: absolute;
+      padding-top: 0rem;
+      margin-left: 0rem;
+      left: 5rem;
+      top: 26vh;
+      color: #fff;
+      text-transform: none;
+      animation-name: fadeIn;
+      animation-duration: 8s;
+      animation-delay: 4s;
+      }
+  }
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+				<div class="col-xs-12 col-md-6 column-left-top">
+					<div class="header__logo-box">
+						<img src="img/logo-enjoy.svg" alt="header__logo"
+						class="header__logo">
+					</div>
+					<div class="header__text-box">
+						<h1 class="heading-primary">
+							<span class="heading-primary--first">
+								Discover #enjoy
+							</span>
+							<span class="heading-primary--second">
+								The new 2018 brand
+							</span>
+						</h1>
+					</div>	
+				</div>
+
+				<div class="col-xs-12 col-md-6 right-column-top">
+					<div class="product">
+						<div class="slide1"></div>		
+						<div class="slide2"></div>
+						<div class="slide3"></div>
+						<div class="slide4"></div>					
+					</div>
+				</div>
+			</div>	<!-- end first row-->		
+			
+						
+				<div class="row bottomsection">
+
+					<div class="col-md-6 col-sm-12 column-left-bottom">
+						<div class="product" id="contact-box">
+							<h2 class="contact-header">contact</h2>
+							<ul class="contact-side">
+								<li class="contact-side__item">
+									<!-- <svg class="phone-1">
+										<use xlink:href="img/sprite.svg#phone_2"></use>
+									</svg> -->
+									<img src="img/phone_1.svg" alt="contact-logo"
+									class="contact-logo">
+									<span class="contact-numbers">+39 0437 540550</span>
+								</li>
+								<li class="contact-side__item">
+									<img src="img/phone_2.svg" alt="contact-logo"
+									class="contact-logo">
+									<span class="contact-numbers">+39 0437 540550</span>								
+								</li>
+								<li class="contact-side__item">
+									<img src="img/mail.svg" alt="contact-logo"
+									class="contact-logo">
+									<span class="contact-numbers">+39 0437 540550</span>								
+								</li>
+								<li class="contact-address">
+									<p class="contact-address">
+										<span class="contact-address--first">
+											4 Planets S.r.l. Viale Vasco Salvatelli 18
+										</span>
+										<span class="contact-address--second">
+											Z.I. Villa di Villa 32026 MEL (BL) ITALY
+										</span>
+										<span class="contact-address--second">
+											EU VAT Reg No: IT 01081410258
+										</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-12 right-column-bottom">
+						<div class="product">
+							<div class="back-slide1"></div>	
+							<div class="back-slide2"></div>
+							<div class="back-slide3"></div>
+							<div class="back-slide4"></div>					
+						</div>		
+					</div>
+				</div>
+		</div> 
+</body>
+
+<script>					
+	(function(){
+		// debugger;
+		var nodesArray = Array.prototype.slice.call(document.querySelectorAll("div.product"));
+
+		var changeOpacity = function(opacity) { nodesArray.map(function(element){
+			element.style.opacity = opacity;
+		})};
+		changeOpacity(0);
+		
+					setTimeout(function(){
+						changeOpacity(1);         
+					}, 4000);
+	})();
+
+</script>
+</html>
